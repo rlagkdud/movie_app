@@ -13,7 +13,9 @@ function Movie({ year,title,summary,poster,genres}){
                     <li key={index} className="genres__genre">{genre}</li>
                 ))}
             </ul>
-            <p className="movie__year">{summary}</p>
+            <p className="movie__year">
+                {summary.length<180 ? summary.slice(0,180) : summary.slice(0,180)+"..."}
+            </p>
             
         </div>
     </div>
